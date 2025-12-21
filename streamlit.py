@@ -329,6 +329,7 @@ elif page == "Arrival & Departure Visualizations":
         ax.set_title(f"Flight Status Distribution for {airport_city_viz}")
         st.pyplot(fig)
 
+
 #---------------- Creator Info Page ----------------
 elif page == "Creator Info":
     st.title("Creator Information")
