@@ -1,6 +1,5 @@
 import streamlit as st
 import pandas as pd
-from tabulate import tabulate
 import sqlite3
 import matplotlib.pyplot as plt
 import seaborn as sns
@@ -294,12 +293,12 @@ elif page == "Arrival & Departure Visualizations":
         df_viz = get_data(query_viz)
 
     # Bar chart
-        st.subheader(f"Flight Status Distribution for {departure_city_viz}")
+        st.subheader(f"Flight Departure Status Plot for {departure_city_viz}")
         fig, ax = plt.subplots()
         sns.barplot(data=df_viz, x='flight_status', y='count', ax=ax)
         ax.set_xlabel("Flight Status")
         ax.set_ylabel("Count")
-        ax.set_title(f"Flight Status Distribution for {departure_city_viz}")
+        ax.set_title(f"Flight Departure Status Plot for {departure_city_viz}")
         st.pyplot(fig)
 
     airport_city_viz = st.selectbox("Select an Arrival City for Visualization:", {municipality for municipality in pd.read_sql_query("SELECT DISTINCT municipality_name FROM airports_data WHERE municipality_name IS NOT NULL;", sqlite3.connect('flight_data.db'))['municipality_name']})
@@ -321,12 +320,12 @@ elif page == "Arrival & Departure Visualizations":
         df_viz = get_data(query_viz)
 
     # Bar chart
-        st.subheader(f"Flight Status Distribution for {airport_city_viz}")
+        st.subheader(f"Flight Arrival Status Plot for {airport_city_viz}")
         fig, ax = plt.subplots()
         sns.barplot(data=df_viz, x='flight_status', y='count', ax=ax)
         ax.set_xlabel("Flight Status")
         ax.set_ylabel("Count")
-        ax.set_title(f"Flight Status Distribution for {airport_city_viz}")
+        ax.set_title(f"Flight Arrival Status Plot for {airport_city_viz}")
         st.pyplot(fig)
 
 
