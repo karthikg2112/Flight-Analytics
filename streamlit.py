@@ -332,7 +332,7 @@ elif page == "Arrival & Departure Visualizations":
 #---------------- Creator Info Page ----------------
 elif page == "Creator Info":
     st.title("Creator Information")
-    st.image("C:/Users/karth/Downloads/Code/env/Scripts/Profile-Pic.jpeg", width=200)
+    st.image("Profile-Pic.jpeg", width=200)
     st.write("""
     **Name:** Karthik G 
     **Email:** karthikg2112@gmail.com
@@ -340,4 +340,5 @@ elif page == "Creator Info":
     **LinkedIn:** [Karthik G](https://www.linkedin.com/in/karthik-g-620760369?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app)
     """
     )
+
 
