@@ -21,7 +21,7 @@ page = st.sidebar.selectbox("Select a page:", ["Home", "Arrival and Departure Da
 #---------------- Home Page ----------------
 if page == "Home":
     st.title("Flight Data Analytics Home")
-    st.image("C:\\Users\\karth\\Downloads\\Code\\env\\Scripts\\airplane-taking-off-stockcake-1.jpg")
+    st.image("C:/Users/karth/Downloads/Code/env/Scripts/airplane-taking-off-stockcake-1.jpg")
     st.write("""
     Welcome to the Flight Data Analytics Dashboard! This application provides insights into flight operations, including arrivals and departures.
     Navigate through the sidebar to explore different sections of the dashboard.
@@ -332,7 +332,7 @@ elif page == "Arrival & Departure Visualizations":
 #---------------- Creator Info Page ----------------
 elif page == "Creator Info":
     st.title("Creator Information")
-    st.image("C:\\Users\\karth\\Downloads\\Code\\env\\Scripts\\Profile-Pic.jpeg", width=200)
+    st.image("C:/Users/karth/Downloads/Code/env/Scripts/Profile-Pic.jpeg", width=200)
     st.write("""
     **Name:** Karthik G 
     **Email:** karthikg2112@gmail.com
